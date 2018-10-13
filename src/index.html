@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>
+    <%= json.project.title %>
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Safari, you're the worst -->
+  <meta name='format-detection' content='telephone=no'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <%= t.include("partials/_head.html") %>
+</head>
+
+<body>
+
+  <responsive-child class="map-container">
+    <div class="outmost">
+      <section class="chatter">
+        <h1>White working class population losing ground</h1>
+        <p>In 2017, white people without a college degree make up 46 percent of the Washington's population age 25 and up, down from 53 percent in 2010. While every state saw declines in this period, Washington's is among the largest.</p>
+      </section>
+
+      <div class="aspect-ratio-outer">
+        <div class="aspect-ratio-inner">
+
+          <leaflet-map zoom=6>
+            <tile-layer layer="cartoPositron"></tile-layer>
+            <geo-json>
+              <geo-data>
+                <%= t.include("degrees.geo.json") %>
+              </geo-data>
+              <geo-style>{ "weight": 1, "color": "#000", "opacity":0.1 }</geo-style>
+               <geo-palette property="CHANGE">
+                <color-mapping min=-8.5 max=-7.5 color="#ffffcc"></color-mapping>
+                <color-mapping min=-7.4 max=-6.5 color="#ffad33"></color-mapping>
+                <color-mapping min=-6.4 max=-5.5 color="#c2e699"></color-mapping>
+                <color-mapping min=-5.4 max=-4.5 color="#66cc66"></color-mapping>
+                
+                
+                <!--
+                <color-mapping min=-0.1 max=-2.9 color="#c2e699"></color-mapping>
+                <color-mapping min=-3.0 max=-4.1 color="#66cc66"></color-mapping>
+                <color-mapping min=-5.0 max=-6.1 color="#339933"></color-mapping>
+                <color-mapping min=0 max=1.5 color="#006622"></color-mapping>
+                -->                
+              </geo-palette>
+              <geo-popup>
+                <h1 class="bigheader">{{JURNM}}</h1>
+                           <ul>
+                  <li> Change: {{CHANGE}}</li>
+                  <li> 2017: {{2017}}</li>
+                  <li> 2010: {{2010}}</li>
+                </ul>
+              </geo-popup>
+            </geo-json>
+          </leaflet-map>
+
+        </div>
+        <aside class="legend">
+          <h1>Map legend</h1>
+          <ul class="scale">
+            <li>
+              <span class="block" style="background-color: red"></span> Cherry</li>
+            <li>
+              <span class="block" style="background-color: orange"></span> Orange</li>
+            <li>
+              <span class="block" style="background-color: yellow"></span> Lemon</li>
+            <li>
+              <span class="block" style="background-color: green"></span> Lime</li>
+            <li>
+              <span class="block" style="background-color: blue"></span> Blueberry</li>
+          </ul>
+        </aside>
+      </div>
+
+
+      <div class="source">Source: U.S. Census
+        <span class="credit">Frank Mina / THE SEATTLE TIMES</div>
+    </div>
+  </responsive-child>
+
+  <script src="app.js"></script>
+  <% /*= t.include("partials/_foot.html"); */ %>
+    <%= t.include("partials/_workHere.html") %>
+</body>
+
+</html>
