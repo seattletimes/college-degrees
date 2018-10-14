@@ -31,27 +31,19 @@
               <geo-data>
                 <%= t.include("degrees.geo.json") %>
               </geo-data>
-              <geo-style>{ "weight": 1, "color": "#000", "opacity":0.1 }</geo-style>
+              <geo-style>{ "weight": 1, "color": "#000", "opacity":0.2 }</geo-style>
                <geo-palette property="CHANGE">
-                <color-mapping min=-8.5 max=-7.5 color="#ffffcc"></color-mapping>
-                <color-mapping min=-7.4 max=-6.5 color="#ffad33"></color-mapping>
-                <color-mapping min=-6.4 max=-5.5 color="#c2e699"></color-mapping>
-                <color-mapping min=-5.4 max=-4.5 color="#66cc66"></color-mapping>
-                
-                
-                <!--
-                <color-mapping min=-0.1 max=-2.9 color="#c2e699"></color-mapping>
-                <color-mapping min=-3.0 max=-4.1 color="#66cc66"></color-mapping>
-                <color-mapping min=-5.0 max=-6.1 color="#339933"></color-mapping>
-                <color-mapping min=0 max=1.5 color="#006622"></color-mapping>
-                -->                
+                <color-mapping min=-8.0 max=-6.5 color="#238443"></color-mapping>
+                <color-mapping min=-6.49 max=-4.5 color="#78c679"></color-mapping>
+                <color-mapping min=-4.49 max=-2.5 color=" #d9f0a3"></color-mapping>
+                <color-mapping min=-2.49 max=1.5 color="#fee391"></color-mapping>              
               </geo-palette>
               <geo-popup>
                 <h1 class="bigheader">{{JURNM}}</h1>
                            <ul>
-                  <li> Change: {{CHANGE}}</li>
-                  <li> 2017: {{2017}}</li>
-                  <li> 2010: {{2010}}</li>
+                  <li> <strong>Change:</strong> {{CHANGE}}</li>
+                  <li> <strong>2017:</strong> {{2017}}</li>
+                  <li> <strong>2010:</strong> {{2010}}</li>
                 </ul>
               </geo-popup>
             </geo-json>
@@ -62,15 +54,13 @@
           <h1>Map legend</h1>
           <ul class="scale">
             <li>
-              <span class="block" style="background-color: red"></span> Cherry</li>
+              <span class="block" style="background-color: #238443; opacity:0.6"></span>-8.0 to -6.5</li>
             <li>
-              <span class="block" style="background-color: orange"></span> Orange</li>
+              <span class="block" style="background-color: #78c679; opacity:0.6"></span> -6.49 to -4.5</li>
             <li>
-              <span class="block" style="background-color: yellow"></span> Lemon</li>
+              <span class="block" style="background-color:#d9f0a3; opacity: 0.8"></span> -4.49 to -2.5 </li>
             <li>
-              <span class="block" style="background-color: green"></span> Lime</li>
-            <li>
-              <span class="block" style="background-color: blue"></span> Blueberry</li>
+              <span class="block" style="background-color:#fee391; opacity:0.6"></span> -2.49 to 1.5</li>
           </ul>
         </aside>
       </div>

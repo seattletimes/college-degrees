@@ -5,7 +5,7 @@
 {"County":"Cowlitz County, Washington","CHANGE":-3.4,"2017":"72.3%","2010":"75.6%"},
 {"County":"Franklin County, Washington","CHANGE":-4.9,"2017":"36.6%","2010":"41.4%"},
 {"County":"Grant County, Washington","CHANGE":-4.5,"2017":"49.9%","2010":"54.4%"},
-{"County":"Grays Harbor County, Washington","CHANGE":1.2,"2017":"72.3%","2010":"71.1%"},
+{"County":"Grays Harbor County, Washington","CHANGE":1.2,"2017":"72.3%","2010":"71.1%",},
 {"County":"Island County, Washington","CHANGE":-4.5,"2017":"53.8%","2010":"58.3%"},
 {"County":"King County, Washington","CHANGE":-7.1,"2017":"28.6%","2010":"35.7%"},
 {"County":"Kitsap County, Washington","CHANGE":-6.7,"2017":"52.0%","2010":"58.7%"},
@@ -19,3 +19,16 @@
 {"County":"Yakima County, Washington","CHANGE":-5.5,"2017":"39.6%","2010":"45.1%"}]
 
 , "CHANGE":"no data","2017":"no data","2010":"no data",
+
+
+
+8,7.5,7.1,7.0,6.8,6.7  -8.0 to -6.5
+
+5.7,5.5,5.4,5.0,4.9,4.5,4.5  -6.49 to -4.5
+
+4.3,4.3,3.8,3.4,3.0,  -4.49 to -2.5
+						
+						-2.49 to 0.5
+
+1.2						-2.49 to 1.5
+
